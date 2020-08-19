@@ -69,7 +69,7 @@ mark {background-color:  rgb(225, 241, 153);
         .prompt {
                 width:95%;
                 padding: 2px;
-                text-align: left;
+                text-align: center;
                 font-size: 14px;
         }
 
@@ -80,12 +80,10 @@ mark {background-color:  rgb(225, 241, 153);
 
         .number-box {
                 margin-top: 15px;
-                margin-left: 80px;
         }
 
         .button {
                 margin-bottom: 10px;
-                margin-left: 16px;
         }
 
         h2 {
