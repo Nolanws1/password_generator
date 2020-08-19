@@ -1,0 +1,116 @@
+header {height: 120px;
+        background-color: black;
+        margin-top: -40px;
+}
+
+#center_text {text-align: center;
+              color: white;
+              padding: 20px;
+}
+
+.hr    {background-color: black;
+        height: 2px;
+        width: 90%;
+}
+
+.text   {font-family:'Concert One', cursive;
+         font-size: 30px;
+}
+    
+.prompt {border:solid;
+        padding: 30px;
+        margin: 0 auto;
+        text-align: center;
+        width: 50%;
+}
+
+.number-box {margin-top: 35px;;
+
+}
+
+.result {border:solid;
+        margin: 0 auto;
+        text-align: center;
+        width: 50%;
+        font-size: 25px;
+}
+
+.input {font-size: 15px;
+}
+
+.button {
+        padding: 15px 25px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        color: black;
+        background-color: rgb(225, 241, 153);
+        border: none;
+        border-radius: 15px;
+        font-family:'Concert One', cursive;
+}
+
+footer {height: 120px;
+        background-color: black;
+}
+
+mark {background-color:  rgb(225, 241, 153);
+}
+
+/*Media Q 600px*/
+
+@media screen and (max-width: 600px) {
+        
+        header {
+                font-size: 20px;
+                height: 130px;
+        }
+
+        .prompt {
+                width:95%;
+                padding: 2px;
+                text-align: center;
+        }
+
+        .result {
+                width: 90%;
+                font-size: 20px;
+        }
+
+        .number-box {
+                margin-top: 15px;
+        }
+
+        .button {
+                margin-bottom: 10px;
+        }
+    
+        .text {
+                font-size: 15px;
+        }
+
+        h2 {
+                font-size: 25px;
+        }
+}
+
+@media screen and (max-width: 768px) {
+        
+        header {
+                height: 150px;
+        }
+        
+        .prompt {
+                width: 90% ;
+                padding: 5px;
+        }
+
+        .text {
+                font-size: 32px;
+        }
+
+        .result {
+                margin-bottom: 70px;
+        }
+
+}
