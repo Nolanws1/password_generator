@@ -8,7 +8,36 @@ var randomLowerCase = lowerCase[Math.floor(Math.random() * lowerCase.length)];
 var randomNumber = number[Math.floor(Math.random() * number.length)];
 var randomSpecial = special[Math.floor(Math.random() * special.length)];
 
-var yourPassword = [randomUpperCase + randomLowerCase + randomNumber + randomSpecial];
+var yourPassword = [randomUpperCase, randomLowerCase, randomNumber, randomSpecial]
+
+function checkUpper() {
+  var checkBox = document.getElementById("Upper");
+  if (checkBox.checked == true) & pressButton(true) {
+    (randomUpperCase = true)
+  } else { false
+  }
+}
+function checkLower() {
+  var checkBox = document.getElementById("Lower");
+  if (checkBox.checked == true){
+    (randomUpperCase = true)
+  } else { false
+  }
+}
+function checkSpecial() {
+  var checkBox = document.getElementById("Special");
+  if (checkBox.checked == true){
+    (randomUpperCase = true)
+  } else { false
+  }
+}
+function checkNumber() {
+  var checkBox = document.getElementById("Number");
+  if (checkBox.checked == true){
+    (randomUpperCase = true)
+  } else { false
+  }
+}
 
 
 //User input form
@@ -20,6 +49,6 @@ var passwordLength = document.getElementById("Length");
 var result = document.getElementById("result");
 
 //Button onclick
-function myFunction() {
+function pressButton() {
     document.getElementById("result").innerHTML = yourPassword;
   }
