@@ -9,8 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
 </head>
 
-<script type="text/javascript" src="index.js"></script>
-
 <body class="text">
     <header>
         <h1 id="center_text">Password Generator</h1>
@@ -20,26 +18,26 @@
         &nbsp;
         <div class="prompt">
             <!--UpperCase-->
-            <input type="checkbox" id="Upper" onclick="checkUpper()">
+            <input type="checkbox" id="Upper">
             <label for="">I want <mark>uppercase characters</mark> in my password.</label><br>
             <!--LowerCase-->
-            <input type="checkbox" id="Lower" onclick="checkLower()">
+            <input type="checkbox" id="Lower">
             <label for="">I want <mark>lowercase characters</mark> in my password.</label><br>
             <!--Special-->
-            <input type="checkbox" id="Special" onclick="checkSpecial()">
+            <input type="checkbox" id="Special">
             <label for="">I want <mark>special characters</mark> in my password.</label><br>
             <!--Numbers-->
-            <input type="checkbox" id="Number" onclick="checkNumber()">
+            <input type="checkbox" id="Number">
             <label for="">I want <mark>numbers</mark> in my password.</label><br>
             <hr class="hr">
             <!--Password Length-->
             <label for="">How long would you like your password to be?</label><br>
             <form action="/action_page.php">
                 <label for="fname">Please choose between <mark>8-128</mark> characters!</label>
-                <input class="number-box" type="text" id="Length"><br><br>
+                <input class="number-box" type="text" id="userLength"><br><br>
             </form>
             <hr class="hr">
-            <button onclick="pressButton()" class="button">Generate my Password</button>
+            <button id="submitBtn" class="button">Generate my Password</button>
         </div>
         <div class="result">
             <h2>Your Password is...</h2>
@@ -51,7 +49,7 @@
     <footer>
         <h2 id='center_text'>Created by Nolan</h2>
     </footer>
-
+<script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
