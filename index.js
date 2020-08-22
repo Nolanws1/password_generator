@@ -16,8 +16,7 @@ var checkLowerCase = document.getElementById("Lower");
 var checkNumber = document.getElementById("Number");
 var checkSpecial = document.getElementById("Special");
 var passwordLength = document.getElementById("userLength");
-var result = document.getElementById("result");
-var tryAgain = 'Try Again'
+// var result = document.getElementById("result");
 
 //Button onclick
 var submitBtn = document.getElementById("submitBtn");
@@ -42,15 +41,20 @@ function pressButton() {
   for (var i = 0; i < selectedLength; i++) {
     output += randomizedSelection[Math.floor(Math.random() * randomizedSelection.length)];
   }
-  //Enforce Password Length Specifications
-  if (selectedLength < 8) {
-    alert("Please choose a password length over 8 characters");
-    output = 'Please choose a password length over 8 characters'
+  
+  
+  
+  //Enforce Password Specifications
+  if (checkSpecial.checked == false && checkNumber.checked == false && checkLowerCase.checked == false && checkUpperCase.checked == false) {
+    output = 'Please check at least one box. Uppercase, Lowercase, Special Characters, or Numbers! ';
+  }
+  if (selectedLength < 8 || selectedLength == null) {
+    output = 'Please choose a password length over 7 characters.'
   }
   if (selectedLength > 128) {
-    alert("Please choose a password length under 128 characters");
-    output = 'Please choose a password length under 128 characters'
+    output = 'Please choose a password length under 129 characters.'
   }
+  
   //html Output
   document.getElementById("result").innerHTML = output;
 } 
