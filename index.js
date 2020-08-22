@@ -16,7 +16,6 @@ var checkLowerCase = document.getElementById("Lower");
 var checkNumber = document.getElementById("Number");
 var checkSpecial = document.getElementById("Special");
 var passwordLength = document.getElementById("userLength");
-// var result = document.getElementById("result");
 
 //Button onclick
 var submitBtn = document.getElementById("submitBtn");
@@ -41,10 +40,8 @@ function pressButton() {
   for (var i = 0; i < selectedLength; i++) {
     output += randomizedSelection[Math.floor(Math.random() * randomizedSelection.length)];
   }
-  
-  
-  
-  //Enforce Password Specifications
+
+  //Require Password Specifications
   if (checkSpecial.checked == false && checkNumber.checked == false && checkLowerCase.checked == false && checkUpperCase.checked == false) {
     output = 'Please check at least one box. Uppercase, Lowercase, Special Characters, or Numbers! ';
   }
@@ -57,4 +54,4 @@ function pressButton() {
   
   //html Output
   document.getElementById("result").innerHTML = output;
-} 
+}
