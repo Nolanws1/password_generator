@@ -33,6 +33,7 @@ header {height: 120px;
         text-align: center;
         width: 50%;
         font-size: 25px;
+        overflow-wrap: break-word ;
 }
 
 .input {font-size: 15px;
@@ -76,6 +77,7 @@ mark {background-color:  rgb(225, 241, 153);
         .result {
                 width: 90%;
                 font-size: 20px;
+                overflow-wrap: break-word;
         }
 
         .number-box {
@@ -107,6 +109,7 @@ mark {background-color:  rgb(225, 241, 153);
 
         .result {
                 margin-bottom: 70px;
+                overflow-wrap: break-word;
         }
 
 }

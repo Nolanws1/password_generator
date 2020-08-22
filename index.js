@@ -45,11 +45,11 @@ function pressButton() {
   //Enforce Password Length Specifications
   if (selectedLength < 8) {
     alert("Please choose a password length over 8 characters");
-    output = 'Try Again'
+    output = 'Please choose a password length over 8 characters'
   }
   if (selectedLength > 128) {
     alert("Please choose a password length under 128 characters");
-    output = 'Try Again'
+    output = 'Please choose a password length under 128 characters'
   }
   //html Output
   document.getElementById("result").innerHTML = output;
