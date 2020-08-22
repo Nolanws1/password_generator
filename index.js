@@ -22,7 +22,7 @@ var submitBtn = document.getElementById("submitBtn");
 submitBtn.addEventListener("click", pressButton)
 function pressButton() {
   var possibleSelection = []
-  var randomizedSelection = possibleSelection;
+  var randomizedSelection = possibleSelection
   var selectedLength = parseInt(passwordLength.value)
   var output = ''
   if (checkUpperCase.checked == true) {
@@ -51,7 +51,7 @@ function pressButton() {
   if (selectedLength > 128) {
     output = 'Please choose a password length under 129 characters.'
   }
-  
+
   //html Output
   document.getElementById("result").innerHTML = output;
 }
