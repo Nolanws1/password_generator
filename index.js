@@ -16,14 +16,15 @@ var submitBtn = document.getElementById("submitBtn");
 submitBtn.addEventListener("click", pressButton)
 function pressButton() {
   var possibleSelection = []
-  var randomizedSelection = possibleSelection
   var selectedLength = parseInt(passwordLength.value)
   var output = ''
   for (var i = 0; i < selectedLength; i++) {
+    //Randomize UPPER,LOWER,NUMBER,SPECIAL
     var randomUpperCase = upperCase[Math.floor(Math.random() * upperCase.length)];
     var randomLowerCase = lowerCase[Math.floor(Math.random() * lowerCase.length)];
     var randomNumber = number[Math.floor(Math.random() * number.length)];
     var randomSpecial = special[Math.floor(Math.random() * special.length)];
+    //If Checkbox is checked...
     if (checkUpperCase.checked == true) {
       possibleSelection.push(randomUpperCase)
     }
@@ -36,6 +37,7 @@ function pressButton() {
     if (checkSpecial.checked == true) {
       possibleSelection.push(randomSpecial)
     }
+    //output
     output += possibleSelection[Math.floor(Math.random() * possibleSelection.length)];
   }
 
@@ -43,7 +45,7 @@ function pressButton() {
   if (checkSpecial.checked == false && checkNumber.checked == false && checkLowerCase.checked == false && checkUpperCase.checked == false) {
     output = 'Please check at least one box. Uppercase, Lowercase, Special Characters, or Numbers! ';
   }
-  if (selectedLength < 8 || selectedLength == null) {
+  if (selectedLength < 8 || passwordLength === null) {
     output = 'Please choose a password length over 7 characters.'
   }
   if (selectedLength > 128) {
