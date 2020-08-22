@@ -17,29 +17,40 @@ var checkNumber = document.getElementById("Number");
 var checkSpecial = document.getElementById("Special");
 var passwordLength = document.getElementById("userLength");
 var result = document.getElementById("result");
+var tryAgain = 'Try Again'
 
 //Button onclick
 var submitBtn = document.getElementById("submitBtn");
 submitBtn.addEventListener("click", pressButton)
 function pressButton() {
   var possibleSelection = []
+  var randomizedSelection = possibleSelection;
   var selectedLength = parseInt(passwordLength.value)
   var output = ''
   if (checkUpperCase.checked == true) {
-    possibleSelection.push(upperCase)
+    possibleSelection.push(randomUpperCase)
   }
   if (checkLowerCase.checked == true) {
-    possibleSelection.push(lowerCase)
+    possibleSelection.push(randomLowerCase)
   }
   if (checkNumber.checked == true) {
-    possibleSelection.push(checkNumber)
+    possibleSelection.push(randomNumber)
   }
   if (checkSpecial.checked == true) {
-    possibleSelection.push(checkSpecial)
+    possibleSelection.push(randomSpecial)
   }
   for (var i = 0; i < selectedLength; i++) {
-    output += "j"
+    output += randomizedSelection[Math.floor(Math.random() * randomizedSelection.length)];
   }
-  console.log(output)
-    document.getElementById("result").innerHTML = output;
-}
+  //Enforce Password Length Specifications
+  if (selectedLength < 8) {
+    alert("Please choose a password length over 8 characters");
+    output = 'Try Again'
+  }
+  if (selectedLength > 128) {
+    alert("Please choose a password length under 128 characters");
+    output = 'Try Again'
+  }
+  //html Output
+  document.getElementById("result").innerHTML = output;
+} 
